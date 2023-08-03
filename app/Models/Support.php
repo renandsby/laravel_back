@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Support extends Model
+class Produto extends Model
 {
     use HasFactory;
 
@@ -16,13 +16,13 @@ class Support extends Model
     protected $fillable = [
         'subject',
         'body',
-        'status'
+        'marca',
     ];
 
-    public function status(): Attribute
+    public function marcas(): Attribute
     {
         return Attribute::make(
-            set: fn (SupportStatus $status) => $status->name,
+            set: fn (ProdutosMarcas $marcas) => $marcas->name,
         );
     }
 }

@@ -2,9 +2,9 @@
 
 namespace App\Enuns;
 
-enum SupportStatus: string
+enum ProdutoMarca: string
 {
-    case A = "Open";
+    case A = "Eletrolux";
     case C = "Closed";
     case P = "Pendent";
 
